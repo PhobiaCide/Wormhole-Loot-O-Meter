@@ -8,7 +8,7 @@
 
 - [Introduction](#introduction)
   - [Use Cases](#use-cases)
-  - [🔥Features](#🔥features)
+  - [Features](#features)
 - [Script Overview](#script-overview)
   - [High-Level Overview](#high-level-overview)
     - [Files In This Project](#files-in-this-project)
