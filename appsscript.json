@@ -1,0 +1,24 @@
+{
+  "timeZone": "America/Chicago",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "GESI",
+        "libraryId": "1KjnRVVFr2KiHH55sqBfHcZ-yXweJ7iv89V99ubaLy4A7B_YH8rB5u0s3",
+        "version": "48"
+      },
+      {
+        "userSymbol": "lib",
+        "version": "0",
+        "libraryId": "11YqOHX_tEOWvisIujSRy-WWr_Dqk7eaGR1l49M9xBzIdsCNOR6EhYuQL",
+        "developmentMode": true
+      }
+    ]
+  },
+  "webapp": {
+    "access": "ANYONE_ANONYMOUS",
+    "executeAs": "USER_DEPLOYING"
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}
