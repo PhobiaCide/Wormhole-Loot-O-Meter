@@ -10,6 +10,20 @@
   - [Use Cases](#use-cases)
   - [🔥Features](#features)
 - [Script Overview](#script-overview)
+- [Getting Started](#getting-started)
+  - [Download Link](#download-link)
+- [Using The Spreadsheet](#using-the-spreadsheet)
+  - [Initial Setup](#initial-setup)
+    - [Configuration](#configuration)
+      - [Alliance Tax](#alliance-tax)
+      - [Loot Handler Fee](#loot-handler-fee)
+    - [Authorization](#authorization)
+    - [Loading Pilots](#loading-pilots)
+      - [Loading Current Fleet](#loading-current-fleet)
+      - [Running A Site](#running-a-site)
+      - [Adding More Pilots](#adding-more-pilots)
+      - [Running More Sites](#running-more-sites)
+- [Results](#results)
   - [High-Level Overview](#high-level-overview)
     - [Files In This Project](#files-in-this-project)
     - [Flowchart](#flowchart)
@@ -29,21 +43,8 @@
     - [Install Dependencies](#install-dependencies)
     - [🛠️Add A Feature](#️add-a-feature)
     - [Submit Pull Request](#submit-pull-request)
-- [Getting Started](#getting-started)
-  - [Download Link](#download-link)
-- [Using The Spreadsheet](#using-the-spreadsheet)
-  - [Initial Setup](#initial-setup)
-    - [Configuration](#configuration)
-      - [Alliance Tax](#alliance-tax)
-      - [Loot Handler Fee](#loot-handler-fee)
-    - [Authorization](#authorization)
-    - [Loading Pilots](#loading-pilots)
-      - [Loading Current Fleet](#loading-current-fleet)
-      - [Running A Site](#running-a-site)
-      - [Adding More Pilots](#adding-more-pilots)
-      - [Running More Sites](#running-more-sites)
-- [Results](#results)
-- [License](#license)
+- [Credits](#credits)
+- [📜License](#license)
 
 ---
 
@@ -73,6 +74,36 @@ Any fleet involving multiple players operating on wormhole sleeper sites can ben
 ## Script Overview
 
 ---
+
+## Getting Started
+
+### Download Link
+
+[Click Here](https://docs.google.com/spreadsheets/d/1dKZ7OjaDgEqzoYoaXt_dhMxFHNkrxQLyQP-HsAnjYqo/copy?usp=sharing) to download your own copy of the Wormhole Loot-O-Meter including Apps Scripts.
+
+## Using The Spreadsheet
+
+### Initial Setup
+
+#### Configuration
+
+##### Alliance Tax
+
+##### Loot Handler Fee
+
+#### Authorization
+
+#### Loading Pilots
+
+##### Loading Current Fleet
+
+##### Running A Site
+
+##### Adding More Pilots
+
+##### Running More Sites
+
+## Results
 
 ### High-Level Overview
 
@@ -119,7 +150,7 @@ git clone https://github.com/PhobiaCide/Loot-O-Meter.git
 #### Install Dependencies
 
 ```bash
-npm install
+  npm install
 ```
 
 #### 🛠️Add A Feature
@@ -128,36 +159,8 @@ npm install
 
 ---
 
-## Getting Started
+## Credits
 
-### Download Link
+## 📜License
 
-[Click Here](https://docs.google.com/spreadsheets/d/1dKZ7OjaDgEqzoYoaXt_dhMxFHNkrxQLyQP-HsAnjYqo/copy?usp=sharing) to download your own copy of the Wormhole Loot-O-Meter including Apps Scripts.
-
-## Using The Spreadsheet
-
-### Initial Setup
-
-#### Configuration
-
-##### Alliance Tax
-
-##### Loot Handler Fee
-
-#### Authorization
-
-#### Loading Pilots
-
-##### Loading Current Fleet
-
-##### Running A Site
-
-##### Adding More Pilots
-
-##### Running More Sites
-
-## Results
-
-## License
-
-📜 Loot-O-Meter is released under the MIT license.
+Loot-O-Meter is released under the [MIT license](https://opensource.org/licenses/MIT).
