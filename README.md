@@ -27,6 +27,10 @@
   - [High-Level Overview](#high-level-overview)
     - [Files In This Project](#files-in-this-project)
     - [Flowchart](#flowchart)
+  - [State Diagram](#state-diagram)
+  - [Sequence Diagram](#sequence-diagram)
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [User Journey Diagram](#user-journey-diagram)
     - [Code Explanation](#code-explanation)
       - [`Code.js`](#codejs)
       - [`esi.js`](#esijs)
@@ -111,6 +115,109 @@ Any fleet involving multiple players operating on wormhole sleeper sites can ben
 
 #### Flowchart
 
+```mermaid
+flowchart TB
+    subgraph Load and Add Pilots
+        A([Load current fleet members through ESI])
+        B[/Add them to an existing Roster of pilots/]
+    end
+
+    subgraph Select Site and Check Database
+        C[/Select a wormhole class and site/]
+        D[(Check the database for the selected site value)]
+    end
+
+    subgraph Display and Calculate Shares
+        E([Display a checkbox to count Drifter Response Battleship drops])
+        F([Calculate each pilot's share based on attendance at each site])
+        G([Display the results at the bottom of the spreadsheet])
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+```
+
+### State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> LoadingFleetMembers: User triggers update
+    LoadingFleetMembers --> UpdatingRoster: Fleet members retrieved successfully
+    LoadingFleetMembers --> Idle: Fleet members retrieval failed
+    UpdatingRoster --> CalculatingLoot: Roster updated successfully
+    UpdatingRoster --> Idle: Roster update failed
+    CalculatingLoot --> DisplayingResults: Loot calculation successful
+    CalculatingLoot --> Idle: Loot calculation failed
+    DisplayingResults --> Idle: User closes results view
+```
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Sheet
+    participant Script
+    participant ESI
+
+    User->>Sheet: Select wormhole class and site
+    Sheet->>Script: Trigger onEdit() function
+    Script->>ESI: Get current fleet members
+    ESI-->>Script: Return fleet members
+    Sheet->>Script: Retrieve roster of recorded pilots
+    Script->>Sheet: Add new pilots to roster
+    Sheet->>Script: User checks for Drifter Response Battleship drops
+    Script->>Sheet: Check if site features DRB drops
+    Sheet->>Script: Return DRB drop information
+    alt DRB drop present
+        Script->>Sheet: Display DRB drop checkbox
+    else DRB drop absent
+        Script->>Sheet: Do not display DRB drop checkbox
+    end
+    Sheet->>User: Display loot calculation results
+
+```
+
+### Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    Pilot }|..|{ Fleet : "participates in"
+    Fleet }|--|{ Site : "visits"
+    Site }|--|{ Drop : "contains"
+    Site }|--|{ DRB : "may contain"
+    Drop }|--|{ Loot : "dropped at"
+```
+
+### User Journey Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Spreadsheet
+    participant Script
+
+    User->>Spreadsheet: Opens the Loot-O-Meter spreadsheet
+    Spreadsheet->>Script: Loads the GESI library
+    Script->>GESI: Requests authorization to access ESI
+    GESI-->>Script: Authorization granted
+    Script->>ESI: Requests list of fleet members
+    ESI-->>Script: Returns list of fleet members
+    Script->>Spreadsheet: Populates pilot roster with fleet members
+    User->>Spreadsheet: Selects wormhole class and site
+    Spreadsheet->>Script: Checks database for site information
+    Script->>Spreadsheet: Displays checkbox for DRB drops if applicable
+    User->>Spreadsheet: Checks DRB drop checkbox if applicable
+    Spreadsheet->>Script: Calculates loot shares based on attendance and drops
+    Script->>Spreadsheet: Displays loot share totals for each pilot
+    User->>Spreadsheet: Closes the Loot-O-Meter spreadsheet
+```
+
 ---
 
 #### Code Explanation
@@ -160,6 +267,9 @@ git clone https://github.com/PhobiaCide/Loot-O-Meter.git
 ---
 
 ## Credits
+
+- The [GESI library](https://github.com/Blacksmoke16/GESI) is used under the MIT license.
+- EVE Online and all related logos and images are property of CCP Games.```
 
 ## 📜License
 
