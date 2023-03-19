@@ -1,6 +1,6 @@
 # 🎁Loot-O-Meter <!-- omit from toc -->
 
-## An Apps Script enhanced ESI connected spreadsheet for wormhole PVE fleet tracking <!-- omit from toc -->
+## 💰 An Apps Script enhanced ESI connected spreadsheet for wormhole PVE fleet tracking <!-- omit from toc -->
 
 🕹️For the MMORPG [Eve Online](https://www.eveonline.com)
 
@@ -25,25 +25,25 @@
       - [Request A Feature](#request-a-feature)
   - [Another Way](#another-way)
     - [Fork The Project](#fork-the-project)
-      - [Clone The Repository](#clone-the-repository)
-      - [Install Dependencies](#install-dependencies)
-      - [Add A Feature](#add-a-feature)
-      - [Submit Pull Request](#submit-pull-request)
+    - [Clone The Repository](#clone-the-repository)
+    - [Install Dependencies](#install-dependencies)
+    - [Add A Feature](#%EF%B8%8Fadd-a-feature)
+    - [Submit Pull Request](#submit-pull-request)
 - [Getting Started](#getting-started)
   - [Download Link](#download-link)
-  - [Using The Spreadsheet](#using-the-spreadsheet)
-    - [Initial Setup](#initial-setup)
-      - [Configuration](#configuration)
-        - [Alliance Tax](#alliance-tax)
-        - [Loot Handler Fee](#loot-handler-fee)
-      - [Authorization](#authorization)
-      - [Loading Pilots](#loading-pilots)
-        - [Loading Current Fleet](#loading-current-fleet)
-        - [Running A Site](#running-a-site)
-        - [Adding More Pilots](#adding-more-pilots)
-        - [Running More Sites](#running-more-sites)
-      - [Results](#results)
-
+- [Using The Spreadsheet](#using-the-spreadsheet)
+  - [Initial Setup](#initial-setup)
+    - [Configuration](#configuration)
+      - [Alliance Tax](#alliance-tax)
+      - [Loot Handler Fee](#loot-handler-fee)
+    - [Authorization](#authorization)
+    - [Loading Pilots](#loading-pilots)
+      - [Loading Current Fleet](#loading-current-fleet)
+      - [Running A Site](#running-a-site)
+      - [Adding More Pilots](#adding-more-pilots)
+      - [Running More Sites](#running-more-sites)
+- [Results](#results)
+- [License](#license)
 
 ---
 
@@ -94,7 +94,7 @@ Any fleet involving multiple players operating on wormhole sleeper sites can ben
 
 ---
 
-## How To Contribute
+## 🤝How To Contribute
 
 ### One Way
 
@@ -122,7 +122,7 @@ git clone https://github.com/PhobiaCide/Loot-O-Meter.git
 npm install
 ```
 
-#### Add A Feature
+#### 🛠️Add A Feature
 
 #### Submit Pull Request
 
@@ -156,6 +156,8 @@ npm install
 
 ##### Running More Sites
 
-#### Results
+## Results
 
+## 📜License
 
+Loot-O-Meter is released under the MIT license.
