@@ -141,6 +141,8 @@ flowchart TB
     F --> G
 ```
 
+---
+
 ### State Diagram
 
 ```mermaid
@@ -155,6 +157,8 @@ stateDiagram-v2
     CalculatingLoot --> Idle: Loot calculation failed
     DisplayingResults --> Idle: User closes results view
 ```
+
+---
 
 ### Sequence Diagram
 
@@ -183,6 +187,8 @@ sequenceDiagram
 
 ```
 
+---
+
 ### Entity Relationship Diagram
 
 ```mermaid
@@ -193,6 +199,8 @@ erDiagram
     Site }|--|{ DRB : "may contain"
     Drop }|--|{ Loot : "dropped at"
 ```
+
+---
 
 ### User Journey Diagram
 
