@@ -187,8 +187,8 @@ sequenceDiagram
 
 ```mermaid
 erDiagram
-    Pilot }|..|{ Fleet : "participates in"
-    Fleet }|--|{ Site : "visits"
+    Pilot }|..|| Fleet : "participates in"
+    Fleet }|..|{ Site : "visits"
     Site }|--|{ Drop : "contains"
     Site }|--|{ DRB : "may contain"
     Drop }|--|{ Loot : "dropped at"
@@ -269,7 +269,7 @@ git clone https://github.com/PhobiaCide/Loot-O-Meter.git
 ## Credits
 
 - The [GESI library](https://github.com/Blacksmoke16/GESI) is used under the MIT license.
-- EVE Online and all related logos and images are property of CCP Games.```
+- EVE Online and all related logos and images are property of CCP Games.
 
 ## 📜License
 
