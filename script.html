@@ -1,0 +1,12 @@
+<script>
+
+function submitForm() {
+        var form = document.getElementById("myForm");
+        google.script.run.withSuccessHandler(processForm).processForm(form);
+      }
+
+      function processForm(data) {
+        document.getElementById("myForm").reset();
+      }
+
+</script>
